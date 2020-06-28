@@ -152,6 +152,12 @@ body {
 }
 
 
+/*  Link text to the category sub pages */
+.category-page-box-link-text {
+    color: black;
+}
+
+
 /*
 *
 *    Themes, css for theme page
