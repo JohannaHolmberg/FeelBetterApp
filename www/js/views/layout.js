@@ -9,26 +9,43 @@ var layout = {
         return [
             m("main.container", vnode.children),
             m("div.layout-bottom-menu", [
-                m("a.layout-bottom-menu-link", {
-                    href: '#!/home',
-                    oncreate: m.route.link
-                }, "Home"),
-                m("a.layout-bottom-menu-link", {
-                    href: '#!/category',
-                    oncreate: m.route.link
-                }, "Category"),
-                m("a.layout-bottom-menu-link", {
-                    href: '#!/themes',
-                    oncreate: m.route.link
-                }, "Theme"),
-                m("a.layout-bottom-menu-link", {
-                    href: '#!/reminder',
-                    oncreate: m.route.link
-                }, "Reminder")
+
+                m("div.layout-bottom-menu-inner", [
+
+                    m("div.layout-bottom-menu-link-container", [
+                        m("a.layout-bottom-menu-link", {
+                            href: '#!/home',
+                            oncreate: m.route.link
+                        }, "HOME"),
+                    ]),
+
+                    m("div.layout-bottom-menu-link-container", [
+                        m("a.layout-bottom-menu-link", {
+                            href: '#!/category',
+                            oncreate: m.route.link
+                        }, "CATEGORY")
+                    ]),
+                    m("div.layout-bottom-menu-link-container", [
+                        m("a.layout-bottom-menu-link", {
+                            href: '#!/themes',
+                            oncreate: m.route.link
+                        }, "THEME")
+                    ]),
+                    m("div.layout-bottom-menu-link-container", [
+                        m("a.layout-bottom-menu-link", {
+                            href: '#!/reminder',
+                            oncreate: m.route.link
+                        }, "REMINDER")
+
+                    ])                
+                ])
+
             ])
 
         ];
     }
 };
+
+
 
 export { layout };

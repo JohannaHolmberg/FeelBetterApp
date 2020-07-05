@@ -18,13 +18,15 @@ var home = {
         });
 
 
-      return m("main.container", [
-                m("div.home-page-container", [
-                    m("div.home-page-quote-div", [
-                        m("p.home-page-quote-paragraf", " \" " + allQuote[randomQuote] + " \" ")
-                    ])
-                  ])
-            ]);// end return
+
+        return m("div.home-page-container", [
+                m("div.home-page-headertext-div", [
+                  m("p.home-page-headertext-text", "FeelBetter")
+                ]),
+                m("div.home-page-quote-div", [
+                    m("p.home-page-quote-paragraf", " \" " + allQuote[randomQuote] + " \" ")
+                ])
+        ]); // end main.container
       }
 };
 

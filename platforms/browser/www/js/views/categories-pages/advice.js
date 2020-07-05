@@ -9,10 +9,19 @@ var advice = {
     view: function() {
       console.log("Advice underpage works");
       return m("main.container", [
-                m("div.home-page-container", [
-                    m("h3", "Advice"),
-                    m("div.home-page-quote-div", [
-                        m("p.home-page-quote-paragraf", " \" " + quoteApi.quoteAdvice.advice + " \" ")
+                m("div.subcategory-page-container", [
+                    m("div.subcategory-page-header-div", [
+                        m("div.subcategory-page-header-text", "ADVICE"),
+                    ]),
+                    m("div.subcategory-page-features-div", [
+                        m("img.subcategory-page-img-back-arrow", {
+                            src: "../../img/arrow_back.png", width: '34', height: '34',
+                            href: "#!/category",
+                            oncreate: m.route.link
+                        })
+                    ]),
+                    m("div.subcategory-page-quote-div", [
+                        m("p.subcategory-page-quote-paragraf", " \" " + quoteApi.quoteAdvice.advice + " \" ")
                     ])
                   ])
             ]);// end return

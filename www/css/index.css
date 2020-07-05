@@ -1,6 +1,14 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
+html {
+    background-image: url("../img/backgroundImage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -20,6 +28,21 @@ body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
 }
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 
 /* Portrait layout (default) */
 .app {
@@ -42,49 +65,104 @@ body {
 
 
 /*  My code */
+.container {
+    height: 100%;
+}
+
+/*
+*
+*    START PAGE / LANDING PAGE
+*
+*/
+
 
 /* Div container that keeps the quote and button that
     takes you to the app
 */
 .start-page-container {
     background-color: lightgrey;
-    margin: 0;
+    margin: auto;
     width: 80%;
-    height: 70%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20%;
+    height: 90%;
+    margin-top: 5em;
 }
+
+.start-page-headerlogo-div {
+    margin: auto;
+    width: 50%;
+    height: 20%;
+}
+
+
+.start-page-headerlogo-img {
+    height: 150px;
+    width: 150px;
+}
+
+
+
+/*
+* Div with the header text in the start page
+*/
+
+.start-page-headertext-text {
+    font-size: 4em;
+    text-align: center;
+}
+
+
 
 /* Div with the quote in the start page */
 .start-page-quote-div {
-    height: 60%; /* To separate quote and button, button below */
+    height: 20%;
+    /* height: 60%; /* To separate quote and button, button below */ */
 }
 
 /* Div where the button is placed in */
 .start-page-nextpage-buttondiv {
-    height: 40%;
+    margin: auto;
+    width: 70%;
+    height: 20%;
 }
 
-.start-page-nextpage-button {
-    padding: 1em 4em 1em 4em;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 30%;
-}
-
-/* paragraf <p> for the start page quote */
 .start-page-quote-paragraf {
     font-size: 2em;
-    margin-right: 10%;
-    margin-left: 10%;
-    padding-top: 40%;
+    /* margin-right: 10%;
+    margin-left: 10%; */
+    text-align: center;
+    margin-top: 20%;
 }
+
+
+.start-page-nextpage-button {
+    border-radius: 20px;
+    padding: 1em 3em 1em 3em;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0px;
+    width: 100%;
+
+}
+.start-page-nextpage-buttondiv {
+    height: 20%;
+}
+
+.start-page-nextpage-button-text {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
 
 
 /*
 *
-*    Home, home page for app
+*    HOME, home page for app
 *
 */
 .home-page-container {
@@ -97,18 +175,30 @@ body {
     margin-top: 20%;
 }
 
+
+.home-page-headertext-text {
+    text-align: center;
+    font-size: 4em;
+    padding-top: 2em;
+}
+
+
+
+
 /* Div with the quote in the home page */
 .home-page-quote-div {
-    height: 90%;
+    height: 90%; /* Make to center everything else to look good on all phones*/
+
 }
 
 /* paragraf <p> for the home page quote */
 .home-page-quote-paragraf {
     font-size: 2em;
-    margin-right: 10%;
-    margin-left: 10%;
-    padding-top: 40%;
+    text-align: center;
 }
+
+
+
 
 /*
 *
@@ -116,46 +206,161 @@ body {
 *
 */
 .layout-bottom-menu {
-    background-color: darkgrey;
+    background-color: #2BA0CC;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 5em;
+    overflow: hidden;
 }
+.layout-bottom-menu-inner {
+    width: 100%;
+    margin: auto;
+}
+
+.layout-bottom-menu-link-container {
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    display: inline-block;
+    text-align: center;
+    line-height: 5em;
+}
+
+
+
+
 
 /* Bottom menu link text */
 .layout-bottom-menu-link {
     margin: 0.5em;
-    font-size: 1.9em;
+    font-size: 1.5em;
     text-decoration: none;
+    color: #fff;
+    text-align: center;
+
 }
+
+/* Bottom Menu responsive for smaller screens */
+@media only screen and (max-width: 380px) {
+    .layout-bottom-menu-link { /* Link text in bottom menu*/
+        margin: 0.5em;
+        font-size: 1.3em;
+    }
+}
+
+/* Bottom Menu responsive for smaller screens */
+@media only screen and (max-width: 380px) {
+    .layout-bottom-menu-link { /* Link text in bottom menu*/
+        margin: 0.5em;
+        font-size: 1.1em;
+    }
+}
+
+
+
 
 /*
 *
-*    Category, css for category page
+*    CATEGORY, css for category page
 *
 */
+
+.category-page-header-div {
+    background-color: #2BA0CC;
+}
+
 .category-page-header-text {
     font-size: 2em;
     text-align: center;
-    padding-left: 1em;
+    color: #fff;
+    padding: 0.5em;
 }
+
+/*  a link text on category page boxes */
+.category-page-box-link-text {
+    font-size: 2.5em;
+    bottom: 0.6em;
+    left: 0.6em;
+    position: absolute;
+    text-decoration: none;
+
+}
+/*  the boxes in category page */
 .category-page-box {
+
     margin: auto;
-    margin-top: 0.2em;
+    margin-top: 1.2em;
     padding-bottom: 1.2em;
     width: 96%;
     height: 11em;
-    background-color: #fff;
+    background-color: lightsteelblue;
     border-radius: 1%;
     box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.6);
+    position: relative;
 }
+
 
 
 /*  Link text to the category sub pages */
 .category-page-box-link-text {
     color: black;
 }
+
+.category-page-box-img {
+    float: right;
+    padding-right: 2em;
+}
+
+
+
+
+
+
+
+/*
+*
+*    ADVICE, css for category page
+*
+*/
+
+.subcategory-page-header-div {
+    background-color: #2BA0CC;
+}
+
+.subcategory-page-header-text {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 0.5em;
+}
+
+/* back arrow img on subcategory page */
+.subcategory-page-img-back-arrow {
+    margin: 1em;
+}
+
+/* back arrow img on subcategory page */
+.subcategory-page-img-front-arrow {
+    margin: 1em;
+    float: right;
+}
+
+.subcategory-page-quote-paragraf {
+    text-align: center;
+    vertical-align: middle;
+    /* margin-top: 40%; /* To keep it centered on all devices */
+    font-size: 2.5em;
+    padding: 2em 1em 2em 1em;
+}
+
+.subcategory-page-bottom-features {
+    position: absolute; /* Makes the arrows stay just above the bottom menu */
+    bottom: 5em;
+    width: 100%; /* To fill the whole width of screen */
+}
+
+
 
 
 /*
@@ -179,5 +384,3 @@ body {
     border-radius: 1%;
     box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.6);
 }
-
-/*  */
