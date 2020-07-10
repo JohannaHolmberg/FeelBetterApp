@@ -7,7 +7,8 @@ README
 
 - För att skapa ett cordova projekt:
 
-```bash cordova create . se.dbwebb.feelBetter FeelBetter
+```
+bash cordova create . se.dbwebb.feelBetter FeelBetter
 ```
 
 - För att se projektet i browsen:
