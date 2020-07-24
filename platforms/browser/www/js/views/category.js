@@ -22,30 +22,61 @@ view: function() {
                     oncreate: m.route.link
                 })
             ]),
+
+            m("div.category-page-box", [
+                m("a.category-page-box-link-text", {
+                    href: "#!/category/love",
+                    oncreate: m.route.link
+                }, "Love"),
+                m("img.category-page-box-img", {
+                    src: "../../img/chongo.png", width: '144', height: '124',
+                    href: "#!/category/love",
+                    oncreate: m.route.link
+                })
+            ]),
+            m("div.category-page-box", [
+                m("a.category-page-box-link-text", {
+                    href: "#!/category/happiness",
+                    oncreate: m.route.link
+                }, "Happiness"),
+                m("img.category-page-box-img", {
+                    src: "../../img/hijab.png", width: '144', height: '124',
+                    href: "#!/category/happiness",
+                    oncreate: m.route.link
+                })
+            ]),
+            m("div.category-page-box", [
+                m("a.category-page-box-link-text", {
+                    href: "#!/category/motivational",
+                    oncreate: m.route.link
+                }, "Motivational"),
+                m("img.category-page-box-img", {
+                    src: "../../img/long.png", width: '144', height: '124',
+                    href: "#!/category/motivational",
+                    oncreate: m.route.link
+                })
+            ]),
+            m("div.category-page-box", [
+                m("a.category-page-box-link-text", {
+                    href: "#!/category/wisdom",
+                    oncreate: m.route.link
+                }, "Wisdom"),
+                m("img.category-page-box-img", {
+                    src: "../../img/pony.png", width: '144', height: '124',
+                    href: "#!/category/wisdom",
+                    oncreate: m.route.link
+                })
+            ]),
             m("div.category-page-box", [
                 m("a.category-page-box-link-text", {
                     href: "#!/category/programmers",
                     oncreate: m.route.link
                 }, "Programming"),
                 m("img.category-page-box-img", {
-                    src: "../../img/chongo.png", width: '144', height: '124',
+                    src: "../../img/top.png", width: '144', height: '124',
                     href: "#!/category/programmers",
                     oncreate: m.route.link
                 })
-            ]),
-
-            m("div.category-page-box", [
-                m("a.category-page-box-link-text", "Coming soon")
-            ]),
-
-            m("div.category-page-box", [
-                m("a.category-page-box-link-text", "Coming soon")
-            ]),
-            m("div.category-page-box", [
-                m("a.category-page-box-link-text", "Coming soon")
-            ]),
-            m("div.category-page-box", [
-                m("a.category-page-box-link-text", "Coming soon")
             ])
         ]); // end return
   }

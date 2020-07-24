@@ -10,7 +10,11 @@ import { theme } from "./views/themes.js";
 
 // categories sub pages, organised in alfapetical order
 import { advice } from "./views/categories-pages/advice.js";
+import { happiness } from "./views/categories-pages/happiness.js";
+import { love } from "./views/categories-pages/love.js";
+import { motivational } from "./views/categories-pages/motivational.js";
 import { programmers } from "./views/categories-pages/programmers.js";
+import { wisdom } from "./views/categories-pages/wisdom.js";
 
 
 var app = {
@@ -45,6 +49,26 @@ var app = {
             "/category/programmers": {
                 render: function() {
                     return m(layout, m(programmers));
+                }
+            },
+            "/category/love": {
+                render: function() {
+                    return m(layout, m(love));
+                }
+            },
+            "/category/motivational": {
+                render: function() {
+                    return m(layout, m(motivational));
+                }
+            },
+            "/category/happiness": {
+                render: function() {
+                    return m(layout, m(happiness));
+                }
+            },
+            "/category/wisdom": {
+                render: function() {
+                    return m(layout, m(wisdom));
                 }
             },
             "/themes": {

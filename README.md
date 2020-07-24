@@ -24,3 +24,6 @@ bash cordova create . se.dbwebb.feelBetter FeelBetter
 npm install --save-dev webpack webpack-cli
 npm install --save mithril
 ```
+
+
+Add how to install splash screen
