@@ -80,7 +80,7 @@ a {
     takes you to the app
 */
 .start-page-container {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     margin: auto;
     width: 80%;
     height: 90%;
@@ -166,7 +166,7 @@ a {
 *
 */
 .home-page-container {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     margin: 0;
     width: 80%;
     height: 70%;

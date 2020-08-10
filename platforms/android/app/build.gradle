@@ -98,6 +98,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-extension/goOut-rjfun-libs.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -293,6 +294,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    implementation "com.google.android.gms:play-services-ads:16.0.0"
+    implementation "com.google.android.gms:play-services-base:+"
+    implementation "com.google.android.gms:play-services-ads:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

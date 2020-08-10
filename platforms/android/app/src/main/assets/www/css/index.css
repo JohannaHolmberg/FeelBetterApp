@@ -1,309 +1,386 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
-
 
 html {
-    background-image: url("../img/backgroundImage.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url("../img/backgroundImage.png");
     background-position: center;
-    background-size:cover;
-    /* opacity: 0.5; */
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    /* background-color:#E4E4E4; */
-    /* background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%); */
-    /* font-family: system-ui, -apple-system, -apple-system-font, 'Roboto', sans-serif; */
-    font-size:12px;
-    height:100vh;
-    margin:0px;
-    padding:0px;
-    /* Padding to avoid the "unsafe" areas behind notches in the screen */
-    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
-    /* text-transform:uppercase; */
-    width:100%;
-    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    height: 100vh;
     margin: 0;
+    padding: 0;
 
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-right, 0);
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    /* padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */ */
-    /* margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */ */
-                                   /* offset horizontal: half of text area width */
+    position: absolute;             /* position in the center of the screen */
+    left: 50%;
+    top: 50%;
+    /* height: 50px;                   /* text area height */
+    /* width: 225px;                   /* text area width */
+    text-align: center;
 }
 
 /* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
     .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+        background-position: left center;
+        padding: 75px 0 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0 0 -198px;  /* offset vertical: half of image height */
     }
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
 }
 
 
 /*  My code */
-/*  Header box with avatar and name and email */
 .container {
-    /* margin-top: 2rem; */
-    line-height: 1.4;
-    font-size: 1.2rem;
-
+    height: 100%;
 }
 
-.header-avatar {
-    border-radius: 50%;
-    height: 6em;
-    width: 6em;
-    border: 1px solid grey;
-    box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.6);
-    margin: 1.5em;
+/*
+*
+*    START PAGE / LANDING PAGE
+*
+*/
 
+
+/* Div container that keeps the quote and button that
+    takes you to the app
+*/
+.start-page-container {
+    background-color: lightgrey;
+    margin: auto;
+    width: 80%;
+    height: 90%;
+    margin-top: 5em;
 }
 
-.sidenav-header-boldtext { /* "subtitle2" google standard */
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 0.1px;
-    font-weight: 900;
-    padding: 0.7em 0em 0em 0.7em;
-}
-
-.sidenav-header-captiontext { /* "caption" google standard */
-    color: #bdbdbd;
-    font-size: 10px;
-    letter-spacing: 0.4px;
-    padding: 0.3em 0em 0em 1em;
+.start-page-headerlogo-div {
+    margin: auto;
+    width: 50%;
+    height: 20%;
 }
 
 
-/* Under menu with all links */
+.start-page-headerlogo-img {
+    height: 150px;
+    width: 150px;
+}
 
-.google-header-bottom {
+
+
+/*
+* Div with the header text in the start page
+*/
+
+.start-page-headertext-text {
+    font-size: 4em;
+    text-align: center;
+}
+
+
+
+/* Div with the quote in the start page */
+.start-page-quote-div {
+    height: 20%;
+    /* height: 60%; /* To separate quote and button, button below */ */
+}
+
+/* Div where the button is placed in */
+.start-page-nextpage-buttondiv {
+    margin: auto;
+    width: 70%;
+    height: 20%;
+}
+
+.start-page-quote-paragraf {
+    font-size: 2em;
+    /* margin-right: 10%;
+    margin-left: 10%; */
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+.start-page-nextpage-button {
+    border-radius: 20px;
+    padding: 1em 3em 1em 3em;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0px;
+    width: 100%;
+
+}
+.start-page-nextpage-buttondiv {
+    height: 20%;
+}
+
+.start-page-nextpage-button-text {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*    HOME, home page for app
+*
+*/
+.home-page-container {
+    background-color: lightgrey;
+    margin: 0;
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+}
+
+
+.home-page-headertext-text {
+    text-align: center;
+    font-size: 4em;
+    padding-top: 2em;
+}
+
+
+
+
+/* Div with the quote in the home page */
+.home-page-quote-div {
+    height: 90%; /* Make to center everything else to look good on all phones*/
+
+}
+
+/* paragraf <p> for the home page quote */
+.home-page-quote-paragraf {
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+
+/*
+*
+*    Layout, bottom navigation menu
+*
+*/
+.layout-bottom-menu {
+    background-color: #2BA0CC;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5em;
     overflow: hidden;
-    background-color: #616161;
+}
+.layout-bottom-menu-inner {
     width: 100%;
-    height: 100%
-    box-sizing: border-box;
+    margin: auto;
 }
 
-
-.google-header-bottom-h6 {
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-size: 20px;
-    margin-left: 1em;
+.layout-bottom-menu-link-container {
+    width: 25%;
+    height: 100%;
+    overflow: auto;
     display: inline-block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-weight: normal;
-    letter-spacing: 0.15px;
+    text-align: center;
+    line-height: 5em;
 }
 
-.inner-google-header {
-    width: 100%;
-    margin: 0.7em;
+
+
+
+
+/* Bottom menu link text */
+.layout-bottom-menu-link {
+    margin: 0.5em;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+
 }
 
-.box {
+/* Bottom Menu responsive for smaller screens */
+@media only screen and (max-width: 380px) {
+    .layout-bottom-menu-link { /* Link text in bottom menu*/
+        margin: 0.5em;
+        font-size: 1.3em;
+    }
+}
+
+/* Bottom Menu responsive for smaller screens */
+@media only screen and (max-width: 380px) {
+    .layout-bottom-menu-link { /* Link text in bottom menu*/
+        margin: 0.5em;
+        font-size: 1.1em;
+    }
+}
+
+
+
+
+/*
+*
+*    CATEGORY, css for category page
+*
+*/
+
+.category-page-header-div {
+    background-color: #2BA0CC;
+}
+
+.category-page-header-text {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 0.5em;
+}
+
+/*  a link text on category page boxes */
+.category-page-box-link-text {
+    font-size: 2.5em;
+    bottom: 0.6em;
+    left: 0.6em;
+    position: absolute;
+    text-decoration: none;
+
+}
+/*  the boxes in category page */
+.category-page-box {
+
+    margin: auto;
+    margin-top: 1.2em;
+    padding-bottom: 1.2em;
+    width: 96%;
+    height: 11em;
+    background-color: lightsteelblue;
+    border-radius: 1%;
+    box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.6);
+    position: relative;
+}
+
+
+
+/*  Link text to the category sub pages */
+.category-page-box-link-text {
+    color: black;
+}
+
+.category-page-box-img {
+    float: right;
+    padding-right: 2em;
+}
+
+
+
+
+
+
+
+/*
+*
+*    ADVICE, css for category page
+*
+*/
+
+.subcategory-page-header-div {
+    background-color: #2BA0CC;
+}
+
+.subcategory-page-header-text {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    padding: 0.5em;
+}
+
+/* back arrow img on subcategory page */
+.subcategory-page-img-back-arrow {
+    margin: 1em;
+}
+
+/* back arrow img on subcategory page */
+.subcategory-page-img-front-arrow {
+    margin: 1em;
+    float: right;
+}
+
+.subcategory-page-quote-paragraf {
+    text-align: center;
+    vertical-align: middle;
+    /* margin-top: 40%; /* To keep it centered on all devices */
+    font-size: 2.5em;
+    padding: 2em 1em 2em 1em;
+}
+
+.subcategory-page-bottom-features {
+    position: absolute; /* Makes the arrows stay just above the bottom menu */
+    bottom: 5em;
+    width: 100%; /* To fill the whole width of screen */
+}
+
+
+
+
+/*
+*
+*    Themes, css for theme page
+*
+*/
+
+.theme-page-header-text {
+    font-size: 2em;
+    text-align: center;
+    padding-left: 1em;
+}
+.theme-page-box {
     margin: auto;
     margin-top: 0.2em;
     padding-bottom: 1.2em;
     width: 96%;
+    height: 11em;
     background-color: #fff;
     border-radius: 1%;
     box-shadow: 2px 2px 2px 2px rgba(68, 68, 68, 0.6);
-}
-
-.box-header { /* "h5" google standard */
-    font-size: 24px;
-    padding: 0.5em;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-.box-undertext { /* "caption" google standard */
-    font-size: 12px;
-    letter-spacing: 0.4px;
-    padding-left: 1em;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-.box-positiv-number { /* "h4" google standard */
-    font-size: 34px;
-    letter-spacing: 0.25px;
-    padding-left: 0.4em;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-.date-box {
-    overflow: hidden;
-    background-color: #fff;
-    padding: 0.2em 0em 0em 0.5em;
-    font-size: 16px;
-    font-weight: 900;
-}
-
-.date-box-text {
-    display: inline-block;
-    font-size: 12px;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-
-}
-
-.header-arrow {
-    float: right;
-    opacity: 0.5;
-    padding-right: 1em;
-    margin: 0.2em;
-}
-
-
-/* Hamburger slide in meny as Google */
-
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-.sidenav-head {
-    height: 30%;
-    background-image: linear-gradient(-90deg, #0277BD, #01579B);
-}
-
-.sidenav-body p,
-.sidenav-goback p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-.sidenav-goback {
-    height: 8%;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-}
-
-.sidenav-goback-leftdiv {
-    display: inline-block;
-}
-
-.sidenav-goback-rightdiv {
-    display: inline-block;
-    float: right;
-}
-.sidenav-boldtext { /* "subtitle2" google standard */
-    font-size: 14px;
-    letter-spacing: 0.1px;
-    font-weight: 900;
-    padding: 0.7em 0em 0em 0.7em;
-}
-
-.sidenav-captiontext { /* "caption" google standard */
-    font-size: 10px;
-    letter-spacing: 0.4px;
-    padding: 0.3em 0em 0em 1em;
-    color: grey;
-}
-.navarrow {
-    opacity: 0.5;
-    padding: 1em;
-}
-
-.sidenav-body {
-    height: 62%;
-    background-color: #fff;
-}
-
-/* side nav body */
-.sidenav-body-icon {
-    display: inline-block;
-    padding: 1em;
-}
-.sidenav-body-icontext-div {
-    display: inline-block;
-    padding: 1em;
-    width: 20%;
-}
-
-.sidnav-body-icon-img {
-    padding: 0em 0em 0em 1em;
-    opacity: 0.5;
-}
-
-.sidenav-body-icontext {
-    padding:
 }
